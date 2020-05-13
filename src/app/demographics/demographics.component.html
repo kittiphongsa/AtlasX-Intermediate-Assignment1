@@ -1,0 +1,16 @@
+<table width="100%" cellpadding="10" cellspacing="1" border="1">
+  <thead>
+    <tr>
+      <th>SUB_REGION</th>
+      <th>STATE_NAME</th>
+      <th>STATE_ABBR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let feature of features | keyvalue">
+      <td (click)="onClick(feature.key)">{{feature.value.attributes.SUB_REGION}}</td>
+      <td (click)="onClick(feature.key)">{{feature.value.attributes.STATE_NAME}}</td>
+      <td (click)="onClick(feature.key)">{{feature.value.attributes.STATE_ABBR}}</td>
+    </tr>
+  </tbody>
+</table>
